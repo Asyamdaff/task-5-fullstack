@@ -16,13 +16,13 @@ class CategoryTest extends TestCase
      * @return void
      */
     
-     public function test_add_Category_page_render(){
-         $this->withoutExceptionHandling();
-         $this->expectException('Illuminate\Auth\AuthenticationException');
-         $this->get('/category/tambah')->assertSeeText('Tambah Category');
-         
-     }
-     public function test_post_add_Category(){
+    public function test_add_Category_page_render(){
+        $this->withoutExceptionHandling();
+        $this->expectException('Illuminate\Auth\AuthenticationException');
+        $this->get('/category/tambah')->assertSeeText('Tambah Category');
+        
+    }
+    public function test_post_add_Category(){
         $this->withoutExceptionHandling();
         $category =  Category::factory()->create();
         $this->expectException('Illuminate\Auth\AuthenticationException');
